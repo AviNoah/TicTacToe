@@ -5,7 +5,7 @@ using namespace std;
 
 
 static int board[3][3];
-bool isXTurn = true;
+bool isXTurn = 1;
 
 void initializeBoard()
 {
@@ -133,7 +133,7 @@ int main()
 			// From here on it is not X's turn.
 			requestInputAs(*"O");
 		}
-		isXTurn != isXTurn; // Flip turn.
+		isXTurn = 1 - isXTurn; // Flip turn.
 		printBoard();
 	}
 	if (checkBoardFor(*"X"))
